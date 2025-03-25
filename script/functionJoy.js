@@ -82,11 +82,11 @@ function countdown(faucetName, element, countDownDate, button) {
 
                 */
                
-                let musicArray1 = [gohan, ] 
+                let musicArray1 = [gohan]; 
 
                 if(faucetName == 'VIE FAUCET'){
                    //playMusic(el, gohan, 'gohan.mp3');
-                   playMusic(el, timesUp, 'timesUp.mp3');   
+                   playMusic(el, timesUp, 'music/timesUp.mp3');   
 
                 }
 
