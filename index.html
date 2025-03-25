@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+
+        body {
+            font-size: 14px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* SECTION */
+        .container {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* ARTICLE 1*/
+        .card-one {
+            background-color:thistle;
+            flex: 1;
+        }
+
+        /* ARTICLE 2*/
+        .card-two {
+            background-color:burlywood;
+            flex: 1;
+            padding-right: 15px;
+        }
+        
+        /* ARTICLE 3*/
+        .card-three {
+            background-color:wheat;
+            flex: 1;
+            padding-right: 15px;
+        }
+     
+        /* ARTICLE 4*/
+        .card-four {
+            background-color:lightgreen;
+            flex: 1;
+        }
+
+        .card-five {
+            background-color:lightgreen;
+            flex: 1;
+        }
+
+        .card-six {
+            background-color:lightgreen;
+            flex: 1;
+        }
+
+        .card-seven {
+            background-color:lightgreen;
+            flex: 1;
+        }
+         
+        /* ALL ARTICLES */
+        .info {
+            border: 3px solid black;
+            border-radius: 15px;
+            padding-bottom: 15px;
+            padding-left: 25px;
+        }
+
+        body {
+            background-color: antiquewhite;
+        }
+
+        /* ALL FAUCET CRYPTO */
+        .faucetList {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /*  EACH FAUCET PLATFORM */
+        .faucet {
+            display: flex;
+            padding-bottom: 2px;
+            gap: 3px;
+        }
+
+        /* ALL FAUCET CRYPTO */
+        .faucet > * {
+            width: 130px;
+        }
+
+        /* NAME OF FAUCET CRYPTO */
+        .faucet span {
+            flex: 0.4;
+            border: 1px solid black;
+            text-indent: 10px;
+            font-weight: bold;
+        }
+
+        /* BUTTONS */
+        button {
+            flex: 0.27;
+        }
+
+        /* TIMERS */
+        input {
+            flex: 0.3;
+        }
+
+        /* TITLE AND LISTITEMS */
+        h4, li {
+            font-weight: bold;
+            color: red;
+        } 
+
+        /* NUMBER OF CLICK */
+        #points {
+            padding-left: 10px;
+        }
+
+        /* ALL LIST ITEMS */
+        .info li {
+            list-style-type: none;
+            padding-left: 15px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .selectFaucet input {
+            width: 93%;
+            padding:1px;
+            margin: 1px;
+            border-radius: 7px;
+            border: 1px solid green;
+        }
+
+        .selectFaucet input:hover {
+            background-color: greenyellow;
+        }
+
+        .selectFaucet {
+            padding-top: 10px;
+        }
+
+        .card-five div, .card-six div, .card-two div {
+            display: flex;
+            gap:10px;
+            padding-top: 5px;
+        }
+
+        .card-five, .card-six {
+            padding-right: 15px;
+            padding-top: 15px;
+        }
+     
+        .deleteButton {
+            background-color: cadetblue;
+        }
+
+        .card-two div {
+            display: flex;
+            gap: 5px;
+            font-weight: bold;
+        }
+
+        .card-two input[type="number"] {
+            width: 50%;
+            text-align: center;
+            background-color: greenyellow;
+            margin-bottom: 2px;
+        }
+
+        .card-two input[type="button"] {
+            margin-left: 37px;
+            width: 150px;
+        }
+
+        .card-five input[type="text"] {
+            width: 200px;
+        }
+
+        .hoverCry {
+            border: 3px solid black;
+            padding: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="container">
+        <article class="info card-one">
+            <div class="selectFaucet">
+                <!-- 5 -->
+                <input type="button" value="AUTOFAUCET">
+                <input type="button" value="BAN FAUCET">
+                <input type="button" value="BCHADS">
+                <input type="button" value="BITHUB">
+                <input type="button" value="BITCOIN TRICKS">
+
+                <!-- 10 -->
+                <input type="button" value="CLAIMBITS">
+                <input type="button" value="CLAIMTRX">
+                <input type="button" value="CRYPTOFLARE">
+                <input type="button" value="DUTCHY CORP 1">
+                <input type="button" value="COINPAYZ">
+
+                <!-- 15 -->
+                <input type="button" value="COINTIPLY">
+                <input type="button" value="WHOOPY 1">
+                <input type="button" value="DUTCHY CORP 2">
+                <input type="button" value="EARNBITMOON">
+                <input type="button" value="FAUCET CRYPTO">
+
+                <!-- 20 -->
+                <input type="button" value="FEYORRA">
+                <input type="button" value="FREEBITCOIN">
+                <input type="button" value="FREE BNB">
+                <input type="button" value="OUR 3">
+                <input type="button" value="OUR 4">
+                <input type="button" value="OUR 5">
+
+                <!-- 25 -->
+                <input type="button" value="OUR 6">
+                <input type="button" value="FREESOLANA">                
+                <input type="button" value="LARVEL FAUCET">
+                <input type="button" value="LARVEL GAME">
+                <input type="button" value="PTC4BTC">
+
+                <!-- 30 -->
+                <input type="button" value="QASHBITS">
+                <input type="button" value="RUSHBITCOIN">
+                <input type="button" value="VIE FAUCET">
+                <input type="button" value="ADSTER 2">
+
+            </div>
+            
+            <div class="faucetList">
+                <center><h4 id="limit">FAUCETS<span id="points"></span><span id="getValue"></span></h4></center>
+
+                <!-- 5 -->
+                <div class="cry1" id="0"><span></span></div> 
+                <div class="cry1" id="1"><span></span></div>
+                <div class="cry1" id="2"><span></span></div>
+                <div class="cry1" id="3"><span></span></div>
+                <div class="cry1" id="4"><span></span></div>
+                
+                <!-- 10 -->
+                <div class="cry1" id="5"><span></span></div>
+                <div class="cry1" id="6"><span></span></div>
+                <div class="cry1" id="7"><span></span></div>
+                <div class="cry1" id="8"><span></span></div>
+                <div class="cry1" id="9"><span></span></div>
+                
+                <!-- 15 -->
+                <div class="cry1" id="10"><span></span></div>    
+                <div class="cry1" id="11"><span></span></div>
+                <div class="cry1" id="12"><span></span></div> 
+                <div class="cry1" id="13"><span></span></div>
+                <div class="cry1" id="14"><span></span></div>
+                
+                <!-- 20 -->
+                <div class="cry1" id="15"><span></span></div>
+                <div class="cry1" id="16"><span></span></div>
+                <div class="cry1" id="17"><span></span></div>
+                <div class="cry1" id="18"><span></span></div>
+                <div class="cry1" id="19"><span></span></div>
+                
+                <!-- 25 -->
+                <div class="cry1" id="20"><span></span></div>
+                <div class="cry1" id="21"><span></span></div>
+                <div class="cry1" id="22"><span></span></div>
+                <div class="cry1" id="23"><span></span></div>
+                <div class="cry1" id="24"><span></span></div>
+                
+                <!-- 30 -->
+                <div class="cry1" id="25"><span></span></div>
+                <div class="cry1" id="26"><span></span></div>
+                <div class="cry1" id="27"><span></span></div>
+                <div class="cry1" id="28"><span></span></div>
+                <div class="cry1" id="29"><span></span></div>
+                
+                <!-- 35 -->
+                <div class="cry1" id="30"><span></span></div>
+                <div class="cry1" id="31"><span></span></div>
+                <div class="cry1" id="32"><span></span></div>
+                <div class="cry1" id="33"><span></span></div>
+                <div class="cry1" id="34"><span></span></div>
+                
+                <!-- 40 -->
+                <div class="cry1" id="35"><span></span></div>
+                <div class="cry1" id="36"><span></span></div>
+                <div class="cry1" id="37"><span></span></div>
+                <div class="cry1" id="38"><span></span></div>
+                <div class="cry1" id="39"><span></span></div>
+
+                <!-- 45 -->
+                <div class="cry1" id="40"><span></span></div>
+                <div class="cry1" id="41"><span></span></div>
+                <div class="cry1" id="42"><span></span></div>
+                <div class="cry1" id="43"><span></span></div>
+                <div class="cry1" id="44"><span></span></div>
+
+                <!-- 50 -->
+                <div class="cry1" id="45"><span></span></div>
+                <div class="cry1" id="46"><span></span></div>
+                <div class="cry1" id="47"><span></span></div>
+                <div class="cry1" id="48"><span></span></div>
+                <div class="cry1" id="49"><span></span></div>
+            </div>
+            
+        </article>
+        
+        <article class="info card-two">
+
+            <center><h4>PTC 1</h4></center>
+            <li><a href="https://www.coinpayu.com/dashboard/ads_surf" target="_blank">COINPAYU</a></li>
+            <li><a href="http://www.cointiply.com/ptc" target="_blank">COINTIPLY</a></li>
+            <li><a href="https://adbtc.top/surf/browse" target="_blank">ADBTC TOP</a></li>
+            <li><a href="https://ourcoincash.xyz/ptc" target="_blank">OURCOINCASH</a></li>
+            <li><a href="https://viefaucet.com/app/ptc" target="_blank">VIE FAUCET</a></li>
+            <li><a href="https://btcadspace.com/surf" target="_blank">ADSPACE</a></li>
+            <li><a href="https://bchads.io/ptc" target="_blank">BCHADS</a></li>
+            <li><a href="https://feyorra.top/ptc" target="_blank">FEYORRA</a></li>
+            <li><a href="https://claimtrx.com/ptc" target="_blank">CLAIM TRX</a></li>
+            <li><a href="https://autofaucet.dutchycorp.space/ptc/wall.php" target="_blank">DUTCHY 1</a></li>
+            <li><a href="https://autofaucet.dutchycorp.space/ptc/" target="_blank">DUTCHY 2</a></li>
+            <li><a href="https://faucetcrypto.com/ptc-advertisement/list" target="_blank">F-CRYPTO</a></li>
+            <li><a href="https://whoopyrewards.com/ptc" target="_blank">WHOOPY</a></li>
+            <li><a href="https://freesolana.top/ptc" target="_blank">FREE SOL</a></li>
+            <br>
+            
+            <div><input type="checkbox" class="check1"><input type="text" value=""></div>
+            <div><input type="checkbox" class="check1"><input type="text" value=""></div>
+            <div><input type="checkbox" class="check1"><input type="text" value=""></div>
+            <div><input type="checkbox" class="check1"><input type="text" value=""></div>
+            <div><input type="checkbox" class="check1"><input type="text" value=""></div>
+            <div><input type="checkbox" class="check1"><input type="text" value=""></div>
+            <div><input type="checkbox" class="check1"><input type="text" value=""></div>
+            <div><input type="checkbox" class="check1"><input type="text" value=""></div>
+            <div><input type="checkbox" class="check1"><input type="text" value=""></div>
+            <div><input type="checkbox" class="check1"><input type="text" value=""></div>
+            <div><input type="checkbox" class="check1"><input type="text" value="" id="repeat"></div>
+            
+            <div id="btn1"><input type="button" value="CLEAR ALL"></div><br>
+            <div><a href="https://ourcoincash.xyz/faucet" target="_blank">OURCOINCASH</a></div>
+            
+        </article> 
+        
+        <article class="info card-three">
+            <center><h4>PTC 2</h4></center>    
+            <li><a href="https://www.goldenclix.com/index.php?view=ads_page" target="_blank">GOLDEN CLIX</a></li>
+            <li><a href="https://rushbitcoin.com/?page=ptc" target="_blank">RUSHBITCOIN</a></li>
+            <li><a href="https://larvelfaucet.com/ptc" target="_blank">LARVEL</a></li>
+            <li><a href="https://banfaucet.com/ptc" target="_blank">BAN FAUCET</a></li>
+            <li><a href="https://coinpayz.xyz/ptc" target="_blank">COINPAYZ</a></li>
+            <li><a href="https://earnbitmoon.club/ptc.html" target="_blank">EARNBITMOON</a></li>
+            <li><a href="https://qashbits.com/?page=ptc" target="_blank">QASHBITS</a></li>
+            <li><a href="https://www.freebnbcoin.com/ptc" target="_blank">FREEBNB</a></li>
+            <li><a href="https://coinadster.com/ptc.html" target="_blank">COINADSTER</a></li>
+            <li><a href="https://claimbits.net/ptc.html" target="_blank">CLAIMBITS</a></li>
+            <li><a href="https://cryptobigpay.online/ptc" target="_blank">BIGPAY</a></li>
+            
+            <center><h4>FAU ACHIEVE</h4></center>    
+            <li><a href="https://viefaucet.com/app/challenge" target="_blank">VIE FAUCET</a></li>
+            <li><a href="https://coinpayz.xyz/achievements" target="_blank">COINPAYZ</a></li>
+            <li><a href="https://cryptoflare.net/achievements" target="_blank">CRYPTO FLARE</a></li>
+            <li><a href="https://www.freebnbcoin.com/achievements" target="_blank">FREEBNBCOIN</a></li>
+            <li><a href="https://larvelfaucet.com/daily-rewards" target="_blank">LARVEL</a></li>
+            <li><a href="https://bithub.win/achievements" target="_blank">BITHUB</a></li>
+            <li><a href="https://feyorra.top/achievements" target="_blank">FEYORRA</a></li>
+            <li><a href="https://claimtrx.com/achievements" target="_blank">CLAIM TRX</a></li>
+            <li><a href="https://freesolana.top/achievements" target="_blank">FREE SOL</a></li>
+            
+            <!--  
+                <li><a href="https://cryptobigpay.online/challenges" target="_blank">BIG PAY</a></li>
+                <li><a href="https://simplebits.io/challenges" target="_blank">SIMPLE BITS</a></li>
+                <li><a href="https://btcbunch.com/achievements#google_vignette" target="_blank">BTC BUNCH</a></li> 
+                <li><a href="https://faucet4u.com/dashboard" target="_blank">FAUCET4U</a></li> 
+                <li><a href="https://earnfreebtc.io/?r=1513#" target="_blank">FREE BTC</a></li>
+                -->
+                
+            <center><h4>DAILY BONUS</h4></center>
+            <li><a href="https://viefaucet.com/app/bonus" target="_blank">VIE FAUCET</a></li>
+            <li><a href="https://earnbitmoon.club/bonus.html" target="_blank">EARNBITMOON</a></li>
+            <li><a href="https://coinpayz.xyz/daily" target="_blank">COINPAYZ</a></li>
+            <li><a href="https://cryptoflare.net/dashboard" target="_blank">CRYPTO FLARE</a></li>
+            <li><a href="https://whoopyrewards.com/dashboard" target="_blank">WHOOPY</a></li>
+            <li><a href="https://www.freebnbcoin.com/dailybonus" target="_blank">FREE BNB</a></li>
+            <li><a href="https://freesolana.top/dashboard" target="_blank">FREE SOLANA</a></li>
+        </article>
+        
+        <article class="info card-four">
+            <center><h4>BAN FAUCET</h4></center>
+            <li><a href="https://banfaucet.com/offerwall/monlix" target="_blank">MONLIX</a></li>
+            <li><a href="https://banfaucet.com/offerwall/excentiv" target="_blank">EXENTIV</a></li>
+            <li><a href="https://banfaucet.com/offerwall/offers4crypto" target="_blank">O4CRYPTO</a></li>
+            <li><a href="https://banfaucet.com/offerwall/ewall" target="_blank">EWALL</a></li>
+            <li><a href="https://banfaucet.com/offerwall/bitcotasks" target="_blank">BITCO TASKS</a></li>
+
+            <center><h4>FREE BNB</h4></center>
+            <li><a href="https://www.freebnbcoin.com/offerwall/bitcotasks" target="_blank">BITCO TASKS PTC</a></li>
+            
+            <center><h4>SHORTLINKS</h4></center>
+            <li><a href="https://bitcointricks.com/?page=shortlinks" target="_blank">BITCOINTRICKS</a></li>
+            <li><a href="https://coinpayz.xyz/links" target="_blank">COINPAYZ</a></li>
+            <li><a href="https://claimbits.net/shortlinks.html" target="_blank">CLAIMBITS</a></li>
+            <li><a href="https://www.freebnbcoin.com/links" target="_blank">FREEBNB</a></li>
+            <li><a href="https://coinadster.com/shortlink.html" target="_blank">COINADSTER</a></li>
+            <li><a href="https://earnbitmoon.club/shortlinks.html" target="_blank">EARNBITMOON</a></li>
+            <li><a href="https://banfaucet.com/links" target="_blank">BANFAUCET</a></li>
+            <li><a href="https://rushbitcoin.com/?page=shortlinks" target="_blank">RUSHBITCOIN</a></li>
+            <li><a href="https://viefaucet.com/app/link" target="_blank">VIEFAUCET</a></li>
+            <li><a href="https://autofaucet.dutchycorp.space/shortlinks-wall.php" target="_blank">DUTCH CORP</a></li>
+    
+            <center><h4>VIEW ARTICLES</h4></center>
+            <li><a href="https://cryptoflare.net/articles" target="_blank">CRYPTOFLARE</a></li>
+            <li><a href="https://bithub.win/articles" target="_blank">BITHUB</a></li>
+            <li><a href="https://soundcash.co/user/ptc" target="_blank">SOUND CASH</a></li>
+            
+            <center><h4>BTC CONVERTER</h4></center>
+            <li><a href="https://www.unitconverters.net/currency/usd-to-btc.htm" target="_blank">USD TO BTC</a></li>                       
+            <li><a href="https://www.unitconverters.net/currency/btc-to-php.htm" target="_blank">BTC TO PHP</a></li>
+            <li><a href="https://3commas.io/converter/bnb-btc" target="_blank">BNB TO BTC</a></li>
+        </article>
+        
+        <article class="info card-five">
+            
+            <center><h4>PROGRAMMING</h4></center>
+            <li><a href="../Zelf-Training/CSS/css.html" target="_blank">CSS</a></li>
+            <li><a href="../Zelf-Training/JAVASCRIPT/javascript.html" target="_blank">JAVASCRIPT</a></li>
+            <li><a href="../Zelf-Training/JAVASCRIPT OOP/javascript_oop.html" target="_blank">JAVASCRIPT OOP</a></li>
+            <li><a href="../Zelf-Training/JAVASCRIPT DOM/javascript_dom.html" target="_blank">JAVASCRIPT DOM</a></li>
+            <li><a href="../Zelf-Training/PHP/php.html" target="_blank">PHP</a></li>
+            <li><a href="../Zelf-Training/JQUERY/JQuery.html" target="_blank">JQUERY</a></li>
+    
+            <center><h4>LEARN NEW</h4></center>
+            <li><a href="../Zelf-Training/ENGLISH FOR BEGINNERS/index.html" target="_blank">ENGLISH FOR BEGINNERS</a></li>
+            <li><a href="https://www.facebook.com/groups/1499011680869915/media/videos" t arget="_blank">VIRTUAL ASSISTANT</a></li>
+            <li><a href="../Zelf-Training/PRACTICE_001/html_skeleton.html" target="_blank">HTML SKELETON 1</a></li>
+            <li><a href="../Zelf-Training/PRACTICE_001/html_skeleton2.html" target="_blank">HTML SKELETON 2</a></li>
+            <li><a href="../Zelf-Training/PRACTICE_001/html_structure.html" target="_blank">HTML STRUCTURE 1</a></li>
+            <li><a href="../Zelf-Training/PRACTICE_001/html_structure2.html" target="_blank">HTML STRUCTURE 2</a></li>
+            <li><a href="../Zelf-Training/PRACTICE_001/html_page_header.html" target="_blank">PAGE HEADER</a></li>
+            <li><a href="../Zelf-Training/PRACTICE_001/portfolio.html" target="_blank">PORTFOLIO</a></li>
+
+            <center><h4>ACTIVITIES</h4></center>
+            <li><a href="https://mikebestako.github.io/RoannPawnshop/" target="_blank">ACTIVITIES</a></li>
+            
+        </article>
+        
+    </section>
+
+    <script src="./script/functionJoy.js"></script>
+    <script src="./script/songs.js"></script>
+    <script>
+        let titleCrypto = ['COINPAYU', 'ADBTC TOP', 'ADSPACE', 'VIE FAUCET', 'COINTIPLY', 'LARVEL', 'CRYPTO FLARE',
+                           'BITHUB', 'COINPAYZ', 'FREE BNB', 'EARNBITMOON', 'BIGPAY', 'BAN FAUCET', 'CLAIMBITS',
+                           'QASHBITS', 'FEYORRA', 'PINOYFAUCET', 'FAUCETSFLY', 'COINADSTER', 'FREESOLANA', 'F-CRYPTO',
+                           'DUTCHY', 'SIMPLE BITS', 'GRAB TC', 'FREE BTC', 'FREE LITE', 'FREE ETH', 'FREE DOGE',
+                           'YANNIK', 'BTC TRICKS', 'RUSH BTC'];
+
+        let compute = document.getElementById('compute');
+
+        let points = document.getElementById('points');
+        let lists = document.querySelectorAll('a');
+        let text = document.getElementById('getValue');
+        let displayEarn = document.getElementById('displayEarn');
+        let limit = document.getElementById('limit');
+        let clickLeft = document.getElementById('clickLeft');
+        let parentButton = document.getElementsByClassName('cry1');
+
+        let countPoints = 0;
+        let count = 0;
+        let countLimit = 0;
+        let numberOfClick = 498;
+        let onlyFiveClicks = 0;
+
+        let arrCountPlatform = [];
+        
+        limit.onclick = function(){
+            countLimit = 0;
+            points.textContent = `${countPoints} ==> ${countLimit}`;
+        }
+
+        let btn1 = document.getElementById('btn1');
+        let btn2 = document.getElementById('btn2');
+        let check1 = document.getElementsByClassName('check1');
+        let check2 = document.getElementsByClassName('check2');
+        let payNumbers = document.querySelectorAll('.card-two div span');
+        let repeat = document.getElementById('repeat');
+        let holdValue = [];
+        let btn1x = 0;
+
+        btn1.onclick = function(){
+            for(let x of check1){
+                x.checked = false;
+            }
+            btn1x++;
+            repeat.value = btn1x;
+        }
+
+
+        // List of a Faucets [Label Name, Minutes, Link, Earn, Attribute id of Input Text, Index]
+        let faucetObj = {
+            //faucet23: ['FAUCETS FLY', 10, 'https://faucetsfly.com/roll.html', 1, 'countdown23', 22],
+        }
+
+        let countButtons = 0;
+        let satInArray = [];
+        let faucets = [];
+        let paySatoshi
+        let lengthButtons = 0;
+        
+        let customizeEntry = document.querySelectorAll('.selectFaucet input');
+        for(let addButton of customizeEntry){
+            addButton.onclick = function(){
+
+                let enter = prompt('Enter Yes To Add This Faucet Below');    
+                if(enter != 'Yes'){
+                    return
+                }
+
+                faucets.push(addButton.value);
+                lengthButtons = faucets.length;
+
+                switch(addButton.value){
+                    
+                    /* 
+                    ===============================================================================================================================
+                    8 HOURS
+                    ===============================================================================================================================
+                    */
+                    case 'LARVEL GAME':
+                        holdValue = ['LARVEL GAME', 480, 'https://larvelfaucet.com/game', 3.39, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+                    
+                    /* 
+                    ===============================================================================================================================
+                    1 HOUR
+                    ===============================================================================================================================
+                    */
+                    case 'COINTIPLY':
+                        holdValue = ['COINTIPLY', 60, 'http://www.cointiply.com/home?intent=faucet', 4.41, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+                    case 'FREEBITCOIN':
+                        holdValue = ['FREEBITCOIN', 60, 'https://freebitco.in/', 1, 'countdown' + (countButtons + 1), countButtons]
+                        break;
+                    case 'BITCOIN TRICKS':
+                        holdValue = ['BITCOIN TRICKS', 60, 'https://bitcointricks.com/?page=faucet', 1, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+
+                    //case 'FREE DOGECOIN':
+                        //holdValue = ['FREE DOGECOIN', 60, 'https://www.free-doge.io/free/', 1.9, 'countdown' + (countButtons + 1), countButtons];
+                        //break;
+
+                    case 'OUR 3':
+                        holdValue = ['OUR 3', 1, 'https://ourcoincash.xyz/faucet', 0.072, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+                    case 'OUR 4':
+                        //holdValue = ['FREE LITECOIN', 60, 'https://www.free-litecoin.com/', 1.5, 'countdown' + (countButtons + 1), countButtons];
+                        holdValue = ['OUR 4', 1, 'https://ourcoincash.xyz/faucet', 0.072, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+                    case 'OUR 5':
+                        //holdValue = ['FREE ETHEREUM', 60, 'https://www.free-ethereum.io/free/', 1.7, 'countdown' + (countButtons + 1), countButtons];
+                        holdValue = ['OUR 5', 1, 'https://ourcoincash.xyz/faucet', 0.072, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+                    
+                    //case 'YANNIK':
+                      //  holdValue = ['YANNIK', 60, 'https://yannik.biz/index.php', 1, 'countdown' + (countButtons + 1), countButtons];
+                        //break;
+
+                    /* 
+                    ===============================================================================================================================
+                    1 MINUTE
+                    ===============================================================================================================================
+                    */    
+                    case 'ADSTER 2':
+                        holdValue = ['ADSTER 2', 5, 'https://coinadster.com/faucet.html', 1, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+                    case 'BCHADS':
+                        holdValue = ['BCHADS', 2, 'https://bchads.io/faucet', 0.629, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+
+                    /* 
+                    ===============================================================================================================================
+                    4 MINUTES
+                    ===============================================================================================================================
+                    */    
+                    case 'VIE FAUCET':
+                        holdValue = ['VIE FAUCET', 4, 'https://viefaucet.com/app/faucet', 1.09, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+                    case 'BAN FAUCET':
+                        holdValue = ['BAN FAUCET', 4, 'https://banfaucet.com/faucet', 0.84, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+                    case 'FEYORRA':
+                        holdValue = ['FEYORRA', 4, 'https://feyorra.top/faucet', 0.92, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+                    case 'CLAIMTRX':
+                        holdValue = ['CLAIMTRX', 4, 'https://claimtrx.com/faucet', 0.87, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+                        
+                    /* 
+                    ===============================================================================================================================
+                    5 MINUTES
+                    ===============================================================================================================================
+                    */    
+                    case 'COINPAYZ':
+                        holdValue = ['COINPAYZ', 5, 'https://coinpayz.xyz/faucet', 0.88, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+                    case 'EARNBITMOON':
+                        holdValue = ['EARNBITMOON', 5, 'https://earnbitmoon.club/', 0.90, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+                    case 'CLAIMBITS':
+                        holdValue = ['CLAIMBITS', 5, 'https://claimbits.net/faucet.html', 0.47, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+                    case 'BITHUB':
+                        holdValue = ['BITHUB', 5, 'https://bithub.win/faucet', 1, 'countdown' + (countButtons + 1), countButtons];
+                        break; 
+                    case 'FREE BNB':
+                        holdValue = ['FREE BNB', 5, 'https://www.freebnbcoin.com/faucet', 0.92, 'countdown' + (countButtons + 1), countButtons];   
+                        break;
+                    case 'QASHBITS':
+                        holdValue = ['QASHBITS', 5, 'https://qashbits.com/', 0.57, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+                    case 'AUTOFAUCET':
+                        holdValue = ['AUTOFAUCET', 5, 'https://autofaucet.org/earn/faucet', 0.1639, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+                    case 'PTC4BTC':
+                        holdValue = ['PTC4BTC', 5, 'https://ptc4btc.com/faucet', 0.32, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+
+                    /* 
+                    ===============================================================================================================================
+                    8 MINUTES
+                    ===============================================================================================================================
+                    */    
+
+                    case 'DUTCHY CORP 1':
+                        holdValue = ['DUTCHY CORP 1', 30, 'https://autofaucet.dutchycorp.space/roll.php', 0.45, 'countdown' + (countButtons + 1), countButtons];
+                        //holdValue = ['COINADSTER', 60, 'https://coinadster.com/faucet.html', 2, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+
+                    /* 
+                    ===============================================================================================================================
+                    10 MINUTES
+                    ===============================================================================================================================
+                    */
+                    case 'FREESOLANA':
+                        holdValue = ['FREESOLANA', 10, 'https://freesolana.top/faucet', 1, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+                    case 'OUR 6':
+                        //holdValue = ['BNB OFFER FAUCET', 10, 'https://www.freebnbcoin.com/offerwall/bitcotasks', 0.26, 'countdown' + (countButtons + 1), countButtons];
+                        holdValue = ['OUR 6', 1, 'https://ourcoincash.xyz/faucet', 0.075, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+
+                    /* 
+                    ===============================================================================================================================
+                    15 MINUTES
+                    ===============================================================================================================================
+                    */    
+                    case 'RUSHBITCOIN':
+                        holdValue = ['RUSHBITCOIN', 15, 'https://rushbitcoin.com/', 0.82, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+                    case 'CRYPTOFLARE':
+                        holdValue = ['CRYPTO FLARE', 20, 'https://cryptoflare.net/claim', 2, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+
+                    /* 
+                    ===============================================================================================================================
+                    20 MINUTES
+                    ===============================================================================================================================
+                    */
+                    case 'FAUCET CRYPTO':
+                        holdValue = ['FAUCET CRYPTO', 20, 'https://faucetcrypto.com/dashboard', 0.60, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+
+                    /* 
+                    ===============================================================================================================================
+                    30 MINUTES
+                    ===============================================================================================================================
+                    */
+                    case 'LARVEL FAUCET':
+                        holdValue = ['LARVEL FAUCET', 30, 'https://larvelfaucet.com/faucet', 0.5, 'countdown' + (countButtons + 1), countButtons];   
+                        break; 
+                    case 'WHOOPY 1':
+                        holdValue = ['WHOOPY 1', 4, 'https://whoopyrewards.com/faucet', 0.2, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+                    case 'DUTCHY CORP 2':
+                        holdValue = ['DUTCHY CORP 2', 30, 'https://autofaucet.dutchycorp.space/coin_roll.php', 0.75, 'countdown' + (countButtons + 1), countButtons];
+                        break;
+                }
+            
+                let ptc = ['COINPAYU PTC', 'COINTIPLY PTC'];
+                countButtons++;
+                
+                if(!ptc.includes(addButton.value)){
+                    addButton.classList.add('hidden');
+                }
+                
+                switch(countButtons){
+                    case 1:
+                        faucetObj.faucet1 = holdValue;  
+                        break;
+                    case 2: 
+                        faucetObj.faucet2 = holdValue;
+                        break;
+                    case 3:
+                        faucetObj.faucet3 = holdValue;
+                        break;
+                    case 4:
+                        faucetObj.faucet4 = holdValue;
+                        break;
+                    case 5:
+                        faucetObj.faucet5 = holdValue;
+                        break;
+                    case 6:
+                        faucetObj.faucet6 = holdValue;
+                        break;
+                    case 7:
+                        faucetObj.faucet7 = holdValue;
+                        break;
+                    case 8:
+                        faucetObj.faucet8 = holdValue;
+                        break;
+                    case 9:
+                        faucetObj.faucet9 = holdValue;
+                        break;
+                    case 10:
+                        faucetObj.faucet10 = holdValue;
+                        break;
+                    case 11:
+                        faucetObj.faucet11 = holdValue;
+                        break;
+                    case 12:
+                        faucetObj.faucet12 = holdValue;
+                        break;
+                    case 13:
+                        faucetObj.faucet13 = holdValue;
+                        break;
+                    case 14:
+                        faucetObj.faucet14 = holdValue;
+                        break;
+                    case 15:
+                        faucetObj.faucet15 = holdValue;
+                        break;
+                    case 16:
+                        faucetObj.faucet16 = holdValue;
+                        break;
+                    case 17:
+                        faucetObj.faucet17 = holdValue;
+                        break;
+                    case 18:
+                        faucetObj.faucet18 = holdValue;
+                        break;
+                    case 19:
+                        faucetObj.faucet19 = holdValue;
+                        break;
+                    case 20:
+                        faucetObj.faucet20 = holdValue;
+                        break;
+                    case 21:
+                        faucetObj.faucet21 = holdValue;
+                        break;
+                    case 22:
+                        faucetObj.faucet22 = holdValue;
+                        break;
+                    case 23:
+                        faucetObj.faucet23 = holdValue;
+                        break;
+                    case 24:
+                        faucetObj.faucet24 = holdValue;
+                        break;
+                    case 25:
+                        faucetObj.faucet25 = holdValue;
+                        break;
+                    case 26:
+                        faucetObj.faucet26 = holdValue;
+                        break;
+                    case 27:
+                        faucetObj.faucet27 = holdValue;
+                        break;
+                    case 28:
+                        faucetObj.faucet28 = holdValue;
+                        break;
+                    case 29:
+                        faucetObj.faucet29 = holdValue;
+                        break;
+                    case 30:
+                        faucetObj.faucet30 = holdValue;
+                        break;
+                    case 31:
+                        faucetObj.faucet31 = holdValue;
+                        break;
+                    case 32:
+                        faucetObj.faucet32 = holdValue;
+                        break;
+                    case 33:
+                        faucetObj.faucet33 = holdValue;
+                        break;
+                    case 34:
+                        faucetObj.faucet34 = holdValue;
+                        break;
+                    case 35:
+                        faucetObj.faucet35 = holdValue;
+                        break;
+                    case 36:
+                        faucetObj.faucet36 = holdValue;
+                        break;
+                    case 37:
+                        faucetObj.faucet37 = holdValue;
+                        break;
+                    case 38:
+                        faucetObj.faucet38 = holdValue;
+                        break;
+                    case 39:
+                        faucetObj.faucet39 = holdValue;
+                        break;
+                    case 40:
+                        faucetObj.faucet40 = holdValue;
+                        break;
+                    case 41:
+                        faucetObj.faucet41 = holdValue;
+                        break;
+                    case 42:
+                        faucetObj.faucet42 = holdValue;
+                        break;
+                    case 43:
+                        faucetObj.faucet43 = holdValue;
+                        break;
+                    case 44:
+                        faucetObj.faucet44 = holdValue;
+                        break;
+                    case 45:
+                        faucetObj.faucet45 = holdValue;
+                        break;
+                    case 46:
+                        faucetObj.faucet46 = holdValue;
+                        break;
+                    case 47:
+                        faucetObj.faucet47 = holdValue;
+                        break;
+                    case 48:
+                        faucetObj.faucet48 = holdValue;
+                        break;
+                    case 49:
+                        faucetObj.faucet49 = holdValue;
+                        break;
+                    case 50:
+                        faucetObj.faucet50 = holdValue;
+                        break;
+                    case 51:
+                        faucetObj.faucet51 = holdValue;
+                        break;
+                    case 52:
+                        faucetObj.faucet52 = holdValue;
+                        break;
+                    case 53:
+                        faucetObj.faucet53 = holdValue;
+                        break;
+                    case 54:
+                        faucetObj.faucet54 = holdValue;
+                        break;
+                    case 55:
+                        faucetObj.faucet55 = holdValue;
+                        break;
+                    case 56:
+                        faucetObj.faucet56 = holdValue;
+                        break;
+                    case 57:
+                        faucetObj.faucet57 = holdValue;
+                        break;
+                    case 58:
+                        faucetObj.faucet58 = holdValue;
+                        break;
+                    case 59:
+                        faucetObj.faucet59 = holdValue;
+                        break;
+                    case 60:
+                        faucetObj.faucet60 = holdValue;
+                        break;
+                }
+
+                //let enter = prompt('Enter Yes To Add This Faucet Below');    
+                //if(enter == 'Yes'){
+                    setStyling(countButtons - 1, holdValue[0], holdValue[1]);
+                    setBehaviour(countButtons - 1, holdValue[0], holdValue[1], holdValue[2], holdValue[3], holdValue[4], holdValue[5]);
+                //}
+            }
+        }
+
+        let crypto = document.getElementsByClassName('cry1');
+
+        let i = 0;
+        for(let x of crypto){
+            x.onclick = function(){     
+                for(let c = 0; c < crypto.length; c++){
+                    if(Number(x.id) == c){
+                        crypto[c].classList.add('hoverCry');
+                    } else {
+                        crypto[c].classList.remove('hoverCry');
+                    }
+                }
+            }
+        }
+
+        function setStyling(index, labelName, duration){
+            let colorsArr = ['yellow', 'aqua', 'pink', 'greenyellow', 'orange', 'darksalmon', 'blanchedalmond', 'cadetblue'];
+            let colorArr = [];
+        
+            for(let a = 0; a <= 10; a++){
+                for(let color of colorsArr){
+                    colorArr.push(color);
+                }
+            }
+            
+            let faucets = document.querySelectorAll('.faucetList div');
+            let Timer = '';
+            
+            let button = document.createElement('button'); // Creating an Element
+            let input = document.createElement('input'); // Creating an Element
+            let label = document.createElement('label');
+            let delButton = document.createElement('input'); // Creating Delete Button
+            
+            faucets[index].classList.add('faucet'); // Add Class in a Faucet
+            faucets[index].lastElementChild.textContent = labelName; // Label Name of Faucet
+            faucets[index].lastElementChild.style.backgroundColor = colorArr[index]; // Label BackGround Color of Faucet
+            
+            faucets[index].append(button); // Adding Element in a Div Faucet Class
+            faucets[index].append(input); // Adding Element Div Faucet Class
+            faucets[index].append(label);
+            faucets[index].append(delButton); // Adding Delete Button
+            
+            input.type = "text"; // Set Input to Text
+            input.setAttribute("id", `countdown${index+1}`); // Set ID of Input Text
+            delButton.setAttribute('type', 'checkbox');
+            
+            Timer = String(duration); // Convert value type into String
+            Timer = Timer.length == 1 ? `0${duration}` : duration; // Asking Whether a Length of a Number String is 1 or 2
+            faucets[index].lastElementChild.value = `${Timer}:00`; // Set Timer Value of an Input Text
+            
+            button.textContent = `SET TIMER ${index + 1}`; // Set Text of a Button (SET TIMER 01)
+            delButton.style.padding = 0;
+            delButton.style.margin = 0;
+            
+            label.style.padding = 0;
+            label.margin = 0;
+            label.style.width = '5px';
+            label.style.paddingLeft = '4px';
+            
+            label.textContent = 'DELETE';
+            label.style.fontWeight = 'bold';
+        }
+        
+        function setBehaviour(index, labelName, value1, value2, value3, value4, value5){
+            let buttons = document.querySelectorAll('button');
+            let inputs = document.getElementsByTagName('input');
+            let deleteButton = document.querySelectorAll('input[type=checkbox]');
+            let faucets = document.querySelectorAll('.faucetList div');
+            let obj = Object.entries(faucetObj);
+            
+            let headers = document.querySelectorAll('.faucetList header');
+            let colorWhite = document.getElementsByTagName('h4');
+            
+            deleteButton[index].onclick = function(){
+                
+                let input = prompt("Enter Yes to Delete");
+                
+                if(input == 'Yes'){
+                    faucets[index].style.display = 'none';
+                } else {
+                    deleteButton[index].checked = false;
+                }
+            }
+            
+            buttons[index].onclick = function(){
+                buttons[index].disabled = true;
+                text.textContent = ' --->   ' + labelName + ' ' + `==> [ ${countPoints / 28} Pesos ]`;
+                text.style.color = 'blue';
+                        
+                switch(labelName){                            
+                    case 'BAN FAUCET':
+                        //pauseMusic(burning);
+                        numberOfClick--;
+                        onlyFiveClicks = 0;
+                        break;
+                    case 'LARVEL GAME':
+                        pauseMusic(pod);
+                        break;
+                    case 'EARNBITMOON':
+                        pauseMusic(wedd);
+                        break;
+                    case 'FREE LITECOIN':
+                        pauseMusic(gohan);
+                        break;
+                    case 'COINPAYZ':
+                        //pauseMusic(burning);
+                        break;
+                    case 'VIE FAUCET':
+                        //pauseMusic(gohan);
+                        pauseMusic(timesUp);
+                        break;
+                }
+                setTimer(labelName, value1, value2, value3, value4, buttons[value5]);
+                points.textContent = `${countPoints} ==> ${countLimit}`; 
+            }
+        }
+
+        /*
+        function customizeFaucets(){
+            let colorsArr = ['yellow', 'aqua', 'pink', 'greenyellow', 'orange', 'darksalmon', 'blanchedalmond', 'cadetblue'];
+            let colorArr = [];
+    
+            for(let a = 0; a <= 10; a++){
+                for(let color of colorsArr){
+                    colorArr.push(color);
+                }
+            }
+    
+            let faucets = document.querySelectorAll('.faucetList div');
+            let platforms = Object.entries(faucetObj);
+            let Timer = '';
+            let x = 0;
+    
+            for(const [key, value] of platforms){
+                let button = document.createElement('button'); // Creating an Element
+                let input = document.createElement('input'); // Creating an Element
+    
+                faucets[x].classList.add('faucet'); // Add Class in a Faucet
+                faucets[x].lastElementChild.textContent = value[0]; // Label Name of Faucet
+                faucets[x].lastElementChild.style.backgroundColor = colorArr[x]; // Label BackGround Color of Faucet
+                
+                faucets[x].lastElementChild.classList.add('setFaucetProperties'); // Add Class
+                button.classList.add('buttonProperties'); // Add Class
+    
+                faucets[x].append(button); // Adding Element in a Div Faucet Class
+                faucets[x].append(input); // Adding Element Div Faucet Class
+    
+                input.type = "text"; // Set Input to Text
+                input.setAttribute("id", `countdown${x+1}`); // Set ID of Input Text 
+    
+                Timer = String(value[1]); // Convert value type into String
+                Timer = Timer.length == 1 ? `0${value[1]}` : value[1]; // Asking Whether a Length of a Number String is 1 or 2
+                faucets[x].lastElementChild.value = `${Timer}:00`; // Set Timer Value of an Input Text
+    
+                x++;
+                button.textContent = `SET TIMER ${x}`; // Set Text of a Button (SET TIMER 01)
+            }
+        }
+
+        function setAllFaucets(){
+            let buttons = document.querySelectorAll('button');
+            let inputs = document.getElementsByTagName('input');
+            let obj = Object.entries(faucetObj);
+    
+            let headers = document.querySelectorAll('.faucetList header');
+            let colorWhite = document.getElementsByTagName('h4');
+    
+            for(let [key, value] of obj){
+                buttons[value[5]].onclick = function(){
+                    buttons[value[5]].disabled = true;
+                    text.textContent = '  --->   ' + value[0];
+                    text.style.color = 'blue';
+
+                    switch(value[0]){     
+                                       
+                        case 'BAN FAUCET':
+                            //pauseMusic(burning);
+                            numberOfClick--;
+                            onlyFiveClicks = 0;
+                            break;
+                        case 'COINTIPLY':
+                            break;
+                        case 'LARVEL FAUCET':
+                            break;
+                        case 'MINING':
+                            break;
+                        case 'LARVEL GAME':
+                            pauseMusic(pod);
+                            break;
+                        case 'CRYPTO FLARE':
+                            break;
+                        case 'EARNBITMOON':
+                            pauseMusic(wedd);
+                            break;
+                        case 'FREE LITECOIN':
+                            pauseMusic(gohan);
+                            break;
+                        case 'FREE ETHEREUM':
+                            pauseMusic(burning);
+                            break;
+                    }
+    
+                    if(onlyFiveClicks == 9999){
+                        alert('Please Click BAN FAUCET');
+                        buttons[value[5]].disabled = false;
+                        return
+                    } else {
+                        onlyFiveClicks++;
+                    }
+        
+                    setTimer(value[1], value[2], value[3], value[4], buttons[value[5]]);
+                    points.textContent = `${countPoints} ==> ${countLimit}`; 
+                };
+            }
+        }
+        */
+
+        for(let list of lists){
+            list.addEventListener('click', function(){
+                list.style.backgroundColor = 'greenyellow';
+            });
+        }
+    </script>
+</body>
+</html>
